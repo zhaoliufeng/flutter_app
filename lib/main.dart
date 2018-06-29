@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text('Welcome to Flutter'),
         ),
-        body: new ListView(children: <Widget>[
+        body: new ListView(scrollDirection: Axis.vertical, children: <Widget>[
           new MaterialButton(
             key: new Key("1"),
             color: Colors.blue,
@@ -31,11 +31,14 @@ class MyApp extends StatelessWidget {
             leading: new Icon(Icons.ac_unit),
             title: new Text('title'),
             subtitle: new Text('subtitle'),
-            trailing: new Icon(Icons.favorite, color: Colors.red,),
-            onTap: (){
+            trailing: new Icon(
+              Icons.favorite,
+              color: Colors.red,
+            ),
+            onTap: () {
               print('onTap');
             },
-            onLongPress: (){
+            onLongPress: () {
               print('onLongPress');
             },
           )
